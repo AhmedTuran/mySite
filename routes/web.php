@@ -17,9 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('site')->name('site.')->group(function () {
 route::get('/home',[shop::class,'home'])->name('home');
 route::get('/about',[shop::class,'about'])->name('about');
 route::get('/product',[shop::class,'product'])->name('product');
 
-
+});
 
